@@ -1,0 +1,11 @@
+input.fullwidth {
+    min-width: 100%;
+    color: white;
+    background: none;
+    border: none;
+}
+
+div.prefix {
+    position: absolute;
+    left: 5px;
+}
