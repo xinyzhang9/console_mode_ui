@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import '../../styles/Console.css';
 import Newline from './Newline';
+import {createHistory} from '../../services/history';
+import {process} from '../../services/console';
 class Console extends Component {
     constructor(props) {
         super(props);
         this._handleKeyUp = this._handleKeyUp.bind(this);
         this._onChange = this._onChange.bind(this);
         this.state = {
-            body:[],
             history:[],
             currentValue:''
         }
@@ -15,14 +16,30 @@ class Console extends Component {
 
     _handleKeyUp(e) {
         if (e.key === 'Enter') {
+            let cmd = e.target.value.trim();
             console.log('submit this line');
-            let newHistory = [...this.state.history, e.target.value]
+            let newHistory = [...this.state.history, cmd]
             this.setState({
                 history: newHistory,
                 currentValue: ''
-            },() => {
-                console.log(this.state.currentValue)
             });
+            createHistory({
+                cmd:cmd,
+                system:false
+            }).then(process(cmd).then(res => {
+                console.log(res);
+                if(res.history) {
+                    let updated = [...this.state.history, ...res.history];
+                    this.setState({
+                        history: updated,
+                        currentValue: ''
+                    });
+                    if(res.page) {
+                        this.props.handleRedirect(res.page);
+                    }
+                } 
+                
+            }));
         }
     }
     _onChange(e) {

@@ -3,6 +3,7 @@ input.fullwidth {
     color: white;
     background: none;
     border: none;
+    caret-color:white;
 }
 
 div.prefix {

@@ -1,0 +1,66 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "name": "Setup Server",
+      "isComplete": true
+    },
+    {
+      "id": 2,
+      "name": "Start Server",
+      "isComplete": false
+    },
+    {
+      "id": 3,
+      "name": "Connect to Server",
+      "isComplete": false
+    },
+    {
+      "id": 5907,
+      "name": "Setup Fetch",
+      "isComplete": false
+    }
+  ],
+  "history": [
+    {
+      "cmd": "go dashboard",
+      "system": false,
+      "id": 1
+    },
+    {
+      "cmd": "go dashboard",
+      "system": false,
+      "id": 2
+    },
+    {
+      "cmd": "go dashboard",
+      "system": false,
+      "id": 3
+    },
+    {
+      "cmd": "go dashboard",
+      "system": false,
+      "id": 4
+    },
+    {
+      "cmd": "go home",
+      "system": false,
+      "id": 5
+    },
+    {
+      "cmd": "go dashboard",
+      "system": false,
+      "id": 6
+    },
+    {
+      "cmd": "go about",
+      "system": false,
+      "id": 7
+    },
+    {
+      "cmd": "go home",
+      "system": false,
+      "id": 8
+    }
+  ]
+}
