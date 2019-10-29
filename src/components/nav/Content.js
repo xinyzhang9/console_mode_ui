@@ -1,63 +1,53 @@
 import React, { Component } from 'react';
 import {
   Switch,
-  Route,
-  Redirect  
+  Route,  
 } from "react-router-dom";
+import { createBrowserHistory } from "history";
 import Home from '../Home';
-import About from '../About';
+import Compliance from '../Compliance';
 import Dashboard from '../Dashboard';
 import Console from '../console/Console';
+
+const history = createBrowserHistory();
 class Content extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            redirect: false
+            redirect: false,
+            displayConsole: true
         }
         this.handleRedirect = this.handleRedirect.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
     handleRedirect(page) {
         console.log(page);
-        let component;
-        if(page === 'dashboard') {
-            component = <Dashboard />
-        } else if(page === 'about') {
-            component = <About />
-        } else {
-            component = <Home />
-        }
+        history.push('/'+page)
+    }
+    handleClick() {
         this.setState({
-            redirect: true,
-            page: '/'+page,
-            component
+            displayConsole: !this.state.displayConsole
         })
     }
     render() {
-        const { redirect } = this.state;
-        if(redirect) {
-            return (
-                <div id="wrapper">
-                <Route exact path={this.state.page}>
-                    {this.state.component}
-                </Route>
-                <Console handleRedirect = {this.handleRedirect} />
-            </div>
-            )
-        }
         return (
             <div id="wrapper">
                 <Switch>
                     <Route exact path="/">
                     <Home />
                     </Route>
-                    <Route path="/about">
-                    <About />
+                    <Route path="/Compliance">
+                    <Compliance />
                     </Route>
                     <Route path="/dashboard">
                     <Dashboard />
                     </Route>
                 </Switch>
-                <Console handleRedirect = {this.handleRedirect} />
+                <Console 
+                    handleRedirect = {this.handleRedirect} 
+                    show={this.state.displayConsole}
+                    handleClick={this.handleClick}
+                />
             </div>
         )
     }

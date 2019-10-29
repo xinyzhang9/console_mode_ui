@@ -35,7 +35,23 @@ body {
   .console .consolebody p {
     line-height: 1.5rem;
   }
-  
+  .consoleheader {
+    position: absolute;
+    background: #eee;
+    top:-24px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+  }
+  .consolefooter {
+    font-family: "Courier New";
+    background: #eee;
+    text-align: center;
+    font-weight: 600;
+  }
+  .console-hide-btn {
+    float: right;
+  }
   .blink_me {
     animation: blinker 1s linear infinite;
   }

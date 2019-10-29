@@ -12,7 +12,7 @@ function NavHeader() {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                 <Nav.Link as={Link} to="/" >Home</Nav.Link>
-                <Nav.Link as={Link} to="/about" >about</Nav.Link>
+                <Nav.Link as={Link} to="/compliance" >Compliance</Nav.Link>
                 <Nav.Link as={Link} to="/dashboard" >dashboard</Nav.Link>
                 </Nav>
                 <Form inline>

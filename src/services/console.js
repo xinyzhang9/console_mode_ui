@@ -16,16 +16,26 @@ export const process = (cmd) => {
             });
         case 'ls':
             return Promise.resolve({
-                history: ['home', 'about', 'dashboard']
+                history: ['home', 'compliance', 'dashboard']
+            });
+        case 'new':
+            let component = cmd.substring(first.length+1).toLowerCase().trim();
+            return Promise.resolve({
+                history: ['operation succeed'],
+                component: component,
+                action: 'new'
             });
         default:
-            return;
+            return Promise.resolve({
+                history: ['command not recorgnized']
+            });
     }
 }
 
-const pageList = ['home', 'about', 'dashboard'];
+const pageList = ['home', 'compliance', 'dashboard'];
 const redirectList = ['go', 'cd'];
 const showList = ['show', 'list', 'ls'];
+const newList = ['new', 'add'];
 
 const keywordsMapping = (word) => {
     let w = word.toLowerCase().trim();
@@ -33,6 +43,10 @@ const keywordsMapping = (word) => {
         return 'go';
     } else if(showList.includes(w)) {
         return 'ls';
+    } else if(newList.includes(w)) {
+        return 'new';
+    } else {
+        return w;
     }
 }
 

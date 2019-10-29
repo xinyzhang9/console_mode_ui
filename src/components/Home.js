@@ -20,6 +20,7 @@ class Home extends Component {
                 {this.state.todos.map(todo => (
                     <div>{todo.name}</div>
                 ))}
+                {/* <img alt="" src="images/linux-icon.png" /> */}
             </div>
         )
     }
