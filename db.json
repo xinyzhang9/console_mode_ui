@@ -1,26 +1,4 @@
 {
-  "todos": [
-    {
-      "id": 1,
-      "name": "Setup Server",
-      "isComplete": true
-    },
-    {
-      "id": 2,
-      "name": "Start Server",
-      "isComplete": false
-    },
-    {
-      "id": 3,
-      "name": "Connect to Server",
-      "isComplete": false
-    },
-    {
-      "id": 5907,
-      "name": "Setup Fetch",
-      "isComplete": false
-    }
-  ],
   "compliance": [
     {
       "id": "56105192-6bb7-45ec-879d-063a2796f520",
@@ -99,140 +77,11 @@
       "name": "Licensing for 2012 standard edition and above",
       "publisher": "Microsoft",
       "code": "MS_SERVEROS_PROCESSOR_2012_STD",
-      "metric": "Server(OS) - Processor/CAL",
+      "metric": "Server(OS)-Processor/CAL",
       "date": "2019-10-30T07:36:44.869Z"
     }
   ],
   "history": [
-    {
-      "cmd": "go home",
-      "system": false,
-      "id": "08415b67-2ae2-44a0-a543-868d3d5d2bde"
-    },
-    {
-      "cmd": "show",
-      "system": false,
-      "id": "eb5bb9b8-5675-499a-8b04-a76050086ff3"
-    },
-    {
-      "cmd": "go license",
-      "system": false,
-      "id": "58bb4f09-de05-4b15-8283-140615f43308"
-    },
-    {
-      "cmd": "cd compliance",
-      "system": false,
-      "id": "c3d0b698-f946-4cc6-9e53-115eaac3ff3f"
-    },
-    {
-      "cmd": "new compliance",
-      "system": false,
-      "id": "4b33a0d7-4d9f-4600-9eb0-23415bef0e5c"
-    },
-    {
-      "cmd": "new license",
-      "system": false,
-      "id": "df6b400e-2a2c-4192-90e4-6ec55ea9aa68"
-    },
-    {
-      "cmd": "show me the pages",
-      "system": false,
-      "id": "4d7ca43a-beae-46f7-ad48-e28985ce0b7f"
-    },
-    {
-      "cmd": "go home",
-      "system": false,
-      "id": "67d62ac5-489e-460d-820f-09ee208043a0"
-    },
-    {
-      "cmd": "colitis",
-      "system": false,
-      "id": "c58eed8e-eadf-4c54-a05b-30afb0e672fb"
-    },
-    {
-      "cmd": "go compliance",
-      "system": false,
-      "id": "116ac1c2-7eb1-470a-a2ec-0a2585970b13"
-    },
-    {
-      "cmd": "go home",
-      "system": false,
-      "id": "072e08fc-db2a-4caf-84ed-9717ae020eaf"
-    },
-    {
-      "cmd": "show me the pages",
-      "system": false,
-      "id": "10e9a134-9875-450c-a9f5-b50fb4afc0da"
-    },
-    {
-      "cmd": "new license",
-      "system": false,
-      "id": "8fa40ee6-ad41-4910-a491-ca975c6f58ae"
-    },
-    {
-      "cmd": "go compliance",
-      "system": false,
-      "id": "156faa61-5d87-4fdb-903b-c663b2cb7d87"
-    },
-    {
-      "cmd": "go home",
-      "system": false,
-      "id": "44d6f812-b599-44f1-b5c7-cf1dfc48d906"
-    },
-    {
-      "cmd": "go home",
-      "system": false,
-      "id": "9a0854fe-1cbf-4a31-8745-6c33f109f048"
-    },
-    {
-      "cmd": "new compliance",
-      "system": false,
-      "id": "a11ce27c-5106-4fab-a614-50a797b5e450"
-    },
-    {
-      "cmd": "new license",
-      "system": false,
-      "id": "eb0025e6-a114-410f-8d87-e1e6579806ab"
-    },
-    {
-      "cmd": "go home",
-      "system": false,
-      "id": "7a438418-55c8-48ce-b073-d429d885c6f8"
-    },
-    {
-      "cmd": "go compliance",
-      "system": false,
-      "id": "da0fdc78-b14b-482b-9596-823523ad27d7"
-    },
-    {
-      "cmd": "new compliance",
-      "system": false,
-      "id": "46ee40ee-b9d3-47ee-86c2-b07890624aeb"
-    },
-    {
-      "cmd": "show me the tables",
-      "system": false,
-      "id": "89cf7b30-3bbe-4640-b80e-f61d496e460e"
-    },
-    {
-      "cmd": "hello",
-      "system": false,
-      "id": "0978b189-7294-4b05-b39e-9bfa3ce9726d"
-    },
-    {
-      "cmd": "show me the pages",
-      "system": false,
-      "id": "db0c5557-8dbf-465b-bcf6-c6b2a09d0c36"
-    },
-    {
-      "cmd": "go home",
-      "system": false,
-      "id": "7c083846-0595-4062-ac26-688070126c85"
-    },
-    {
-      "cmd": "new compliance",
-      "system": false,
-      "id": "75a190c7-7a77-4b80-8605-e454727a4b1e"
-    }
+    
   ]
 }

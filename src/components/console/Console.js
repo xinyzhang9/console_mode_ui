@@ -4,9 +4,11 @@ import Newline from './Newline';
 import { createHistory } from '../../services/history';
 import { process } from '../../services/console';
 import NewCompliance from '../modal/NewCompliance';
+import NewLicense from '../modal/NewLicense';
+import GetResource from '../modal/GetResource';
 import { Button, ButtonToolbar } from 'react-bootstrap' 
 import uuidv4 from 'uuid/v4';
-import NewLicense from '../modal/NewLicense';
+
 class Console extends Component {
     constructor(props) {
         super(props);
@@ -15,12 +17,18 @@ class Console extends Component {
         this.renderComponent = this.renderComponent.bind(this);
         this.setNewComplianceState = this.setNewComplianceState.bind(this);
         this.setNewLicenseState = this.setNewLicenseState.bind(this);
+        this.setGetComplianceState = this.setGetComplianceState.bind(this);
+        this.setGetLicenseState = this.setGetLicenseState.bind(this);
 
         this.state = {
             history:[],
             currentValue:'',
             newCompliance: false,
-            newLicense: false
+            newLicense: false,
+            getCompliance: false,
+            getLicense: false,
+            data:[],
+            resource: undefined
         }
     }
 
@@ -38,12 +46,20 @@ class Console extends Component {
                 this.setState({
                     newCompliance: true
                 })
+            } else if(action === 'get') {
+                this.setState({
+                    getCompliance: true
+                })
             }
         }
         if(component === 'license') {
             if(action === 'new') {
                 this.setState({
                     newLicense: true
+                })
+            } else if(action === 'get') {
+                this.setState({
+                    getLicense: true
                 })
             }
         }
@@ -57,6 +73,16 @@ class Console extends Component {
     setNewLicenseState(state) {
         this.setState({
             newLicense: state
+        })
+    }
+    setGetComplianceState(state) {
+        this.setState({
+            getCompliance: state
+        })
+    }
+    setGetLicenseState(state) {
+        this.setState({
+            getLicense: state
         })
     }
 
@@ -87,6 +113,13 @@ class Console extends Component {
                     if(res.component) {
                         this.renderComponent(res.component, res.action)
                     }
+                    if(res.resource) {
+                        this.setState({
+                            resource: res.resource,
+                            data: res.data
+                        })
+                        this.renderComponent(res.resource, res.action)
+                    }
                 } 
                 
             }));
@@ -106,6 +139,22 @@ class Console extends Component {
         }
         if(this.state.newLicense) {
             component = <NewLicense show={this.state.newLicense} onHide={() => this.setNewLicenseState(false)}/>;
+        }
+        if(this.state.getCompliance) {
+            component = <GetResource 
+                show={this.state.getCompliance} 
+                onHide={() => this.setGetComplianceState(false)}
+                data = {this.state.data}
+                resource = {this.state.resource}
+                />;
+        }
+        if(this.state.getLicense) {
+            component = <GetResource 
+                show={this.state.getLicense} 
+                onHide={() => this.setGetLicenseState(false)}
+                data = {this.state.data}
+                resource = {this.state.resource}
+                />;
         }
         if (show) {
             myConsole = (

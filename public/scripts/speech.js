@@ -5,6 +5,8 @@ var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEv
 var phrases = [
 'new compliance',
 'new license',
+'create compliance',
+'create license',
 'show me the pages',
 'go home',
 'go compliance',
