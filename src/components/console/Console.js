@@ -6,6 +6,7 @@ import { process } from '../../services/console';
 import NewCompliance from '../modal/NewCompliance';
 import { Button, ButtonToolbar } from 'react-bootstrap' 
 import uuidv4 from 'uuid/v4';
+import NewLicense from '../modal/NewLicense';
 class Console extends Component {
     constructor(props) {
         super(props);
@@ -13,11 +14,13 @@ class Console extends Component {
         this._onChange = this._onChange.bind(this);
         this.renderComponent = this.renderComponent.bind(this);
         this.setNewComplianceState = this.setNewComplianceState.bind(this);
+        this.setNewLicenseState = this.setNewLicenseState.bind(this);
 
         this.state = {
             history:[],
             currentValue:'',
-            newCompliance: false
+            newCompliance: false,
+            newLicense: false
         }
     }
 
@@ -37,11 +40,23 @@ class Console extends Component {
                 })
             }
         }
+        if(component === 'license') {
+            if(action === 'new') {
+                this.setState({
+                    newLicense: true
+                })
+            }
+        }
     }
 
     setNewComplianceState(state) {
         this.setState({
             newCompliance: state
+        })
+    }
+    setNewLicenseState(state) {
+        this.setState({
+            newLicense: state
         })
     }
 
@@ -87,7 +102,10 @@ class Console extends Component {
         const {handleClick, show} = this.props;
         let component, myConsole;
         if(this.state.newCompliance) {
-            component =   <NewCompliance show={this.state.newCompliance} onHide={() => this.setNewComplianceState(false)}/>;
+            component = <NewCompliance show={this.state.newCompliance} onHide={() => this.setNewComplianceState(false)}/>;
+        }
+        if(this.state.newLicense) {
+            component = <NewLicense show={this.state.newLicense} onHide={() => this.setNewLicenseState(false)}/>;
         }
         if (show) {
             myConsole = (
@@ -120,11 +138,6 @@ class Console extends Component {
         }
         return(
             <div>
-                <div>
-                    <p className="phrase">Phrase...</p>
-                    <p className="result">Right or wrong?</p>
-                    <p className="output">...diagnostic messages</p>
-                </div>
                 {component}
                 {myConsole}
             </div>

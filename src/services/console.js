@@ -1,5 +1,4 @@
 export const process = (cmd) => {
-    console.log('process ',cmd.length);
     let list = cmd.trim().split(' ');
     let first = keywordsMapping(list[0]);
     switch(first) {
@@ -35,7 +34,7 @@ export const process = (cmd) => {
 const pageList = ['home', 'compliance', 'license'];
 const redirectList = ['go', 'cd'];
 const showList = ['show', 'list', 'ls'];
-const newList = ['new', 'add'];
+const newList = ['new', 'add', 'create'];
 
 const keywordsMapping = (word) => {
     let w = word.toLowerCase().trim();

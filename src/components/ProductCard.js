@@ -8,7 +8,8 @@ class ProductCard extends Component {
         return (
             <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" 
-                src={'images/'+content.shortname+'.png'} 
+                src={'images/'+content.shortname+'.png'}
+                alt={"images/linux-icon.png"} 
                 style={{width: '160px', height: '160px',paddingLeft: '10px'}}
             />
             <Card.Body>

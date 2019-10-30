@@ -7,7 +7,7 @@ class Newline extends Component {
             <div>
                 <div className="prefix">></div>
                 <input 
-                    className="fullwidth" 
+                    className="fullwidth console-result" 
                     type="text" 
                     onKeyUp={this.props.onKeyUp} 
                     value={this.props.value} 
