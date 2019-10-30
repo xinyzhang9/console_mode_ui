@@ -21,62 +21,67 @@
       "isComplete": false
     }
   ],
-  "compliance": [],
+  "compliance": [
+    {
+      "id": "56105192-6bb7-45ec-879d-063a2796f520",
+      "name": "SQL Server",
+      "versions": "8",
+      "status": "noncompliant",
+      "overspending": "580.16K",
+      "shortname": "sqlserver",
+      "date": "2019-10-30T03:13:23.721Z"
+    },
+    {
+      "id": "f402fc3a-bd7a-43d8-8a74-a0f335623e38",
+      "name": "Office Visio",
+      "versions": "1",
+      "status": "noncompliant",
+      "overspending": "1.2K",
+      "shortname": "visio",
+      "date": "2019-10-30T03:15:39.866Z"
+    },
+    {
+      "id": "33c56b7d-c55e-4cbb-b630-866c3a456777",
+      "name": "Office",
+      "versions": "2",
+      "status": "noncompliant",
+      "overspending": "0.0",
+      "shortname": "office",
+      "date": "2019-10-30T03:16:03.786Z"
+    },
+    {
+      "id": "8ae94cb8-16c2-49e3-8771-0b20e7be5145",
+      "name": "WinZip",
+      "versions": "3",
+      "status": "compliant",
+      "overspending": "1.14K",
+      "shortname": "winzip",
+      "date": "2019-10-30T03:16:30.412Z"
+    },
+    {
+      "id": "f28b94a6-4629-4d93-9e99-f8bc59d319d9",
+      "name": "Visual Studio",
+      "versions": "1",
+      "status": "compliant",
+      "overspending": "2.74K",
+      "shortname": "visual-studio",
+      "date": "2019-10-30T03:16:47.219Z"
+    },
+    {
+      "id": "52f25e6f-11e3-4cd7-9780-1ced7399b536",
+      "name": "Windows Server",
+      "versions": "5",
+      "status": "compliant",
+      "overspending": "742.13K",
+      "shortname": "windows",
+      "date": "2019-10-30T03:17:07.717Z"
+    }
+  ],
   "history": [
     {
-      "cmd": "ls",
-      "system": false,
-      "id": 1
-    },
-    {
-      "cmd": "go compliance",
-      "system": false,
-      "id": 2
-    },
-    {
-      "cmd": "test",
-      "system": false,
-      "id": "308ce2ca-95ec-4acf-a6b2-a9c633e29191"
-    },
-    {
-      "cmd": "go home",
-      "system": false,
-      "id": "1a0ce314-d0d7-4766-8418-c3af1223c067"
-    },
-    {
-      "cmd": "test",
-      "system": false,
-      "id": "27b55c0a-e0fb-4028-b3c5-a0d21231bbc3"
-    },
-    {
       "cmd": "new compliance",
       "system": false,
-      "id": "96a13ca1-adc2-473b-8685-bbaaf3020a4a"
-    },
-    {
-      "cmd": "new compliance",
-      "system": false,
-      "id": "9d400ab9-353c-491b-90ff-1ae9eb3cea69"
-    },
-    {
-      "cmd": "new compliance",
-      "system": false,
-      "id": "441dd8c9-98f9-49b8-9650-72443ec829df"
-    },
-    {
-      "cmd": "new compliance",
-      "system": false,
-      "id": "50610623-8079-43fd-9653-22b39c133a9c"
-    },
-    {
-      "cmd": "new compliance",
-      "system": false,
-      "id": "d4939055-9feb-40ba-bef7-901a5c1bb991"
-    },
-    {
-      "cmd": "add compliance",
-      "system": false,
-      "id": "db4bb755-0832-4910-90a2-c131bb4df054"
+      "id": "91fcb502-ccc2-4d67-8843-f6b91b45f1af"
     }
   ]
 }

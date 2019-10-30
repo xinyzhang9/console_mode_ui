@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 import NewCompliance from './modal/NewCompliance';
-import { ButtonToolbar, Button } from 'react-bootstrap';
+import { ButtonToolbar, Button, CardGroup } from 'react-bootstrap';
+import { loadCompliance } from '../services/compliance';
+import ProductCard from './ProductCard';
 class Compliance extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            modalShow: false
+            modalShow: false,
+            list: []
         }
         this.setModalShow = this.setModalShow.bind(this);
         this.setModalHide = this.setModalHide.bind(this);
+    }
+
+    componentDidMount() {
+        loadCompliance().then(data => {
+            this.setState({list : data})
+        });
     }
     setModalShow() {
         this.setState({
@@ -24,11 +33,16 @@ class Compliance extends Component {
     render() {
         return (
             <div>
-                <ButtonToolbar>
-                    <Button variant="primary" onClick={() => this.setModalShow()}>
-                        create
-                    </Button>
-                </ButtonToolbar>
+            <CardGroup>
+                {this.state.list.map((c) => (
+                    <ProductCard content={c} key={c.id}/>
+                ))}
+            </CardGroup>
+            <ButtonToolbar>
+                <Button variant="outline-dark" onClick={() => this.setModalShow()}>
+                <i className="fas fa-plus"></i>
+                </Button>
+            </ButtonToolbar>
                 <NewCompliance show={this.state.modalShow} onHide={this.setModalHide} />
             </div>
         )

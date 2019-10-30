@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { Form, Field } from 'react-final-form';
 import Styles from '../../styles/Styles'
+import { createCompliance } from '../../services/compliance';
+import uuidv4 from 'uuid/v4';
 class NewCompliance extends Component {
     constructor(props) {
         super(props);
@@ -12,7 +14,17 @@ class NewCompliance extends Component {
     render() {
         const props = this.props;
         const onSubmit = (values) => {
-            console.log(values)
+            console.log(values);
+            createCompliance({
+                id: uuidv4(),
+                name: values.name,
+                versions: values.versions,
+                status: values.status,
+                overspending: values.overspending,
+                date: new Date()
+            }).then(() => {
+                props.onHide();
+            })
         }
         return(
             
@@ -42,11 +54,35 @@ class NewCompliance extends Component {
                             <label>No.of Versions</label>
                             <Field name="versions" component="input" />
                         </div>
+                        <div>
+                        <label>Compliance status</label>
+                        <div>
+                        <label>
+                            <Field
+                            name="status"
+                            component="input"
+                            type="radio"
+                            value="compliant"
+                            />{' '}
+                            Compliant
+                        </label>
+                        <label>
+                            <Field
+                            name="status"
+                            component="input"
+                            type="radio"
+                            value="noncompliant"
+                            />{' '}
+                            Noncompliant
+                        </label>
+                        </div>
+                    </div>
 
                         <div>
                             <label>Overspending</label>
                             <Field name="overspending" component="input" />
                         </div>
+
 
                         <Button type="submit">Submit</Button>
                     </form>

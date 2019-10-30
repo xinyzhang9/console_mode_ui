@@ -5,6 +5,9 @@ input.fullwidth {
     border: none;
     caret-color:white;
 }
+input.fullwidth:focus {
+    outline: none;
+}
 
 div.prefix {
     position: absolute;

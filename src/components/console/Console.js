@@ -4,7 +4,7 @@ import Newline from './Newline';
 import { createHistory } from '../../services/history';
 import { process } from '../../services/console';
 import NewCompliance from '../modal/NewCompliance';
-import { Button } from 'react-bootstrap' 
+import { Button, ButtonToolbar } from 'react-bootstrap' 
 import uuidv4 from 'uuid/v4';
 class Console extends Component {
     constructor(props) {
@@ -20,6 +20,15 @@ class Console extends Component {
             newCompliance: false
         }
     }
+
+    componentDidMount () {
+        const script = document.createElement("script");
+        script.src = "scripts/speech.js";
+        script.async = true;
+    
+        document.body.appendChild(script);
+    }
+
     renderComponent(component, action) {
         if(component === 'compliance') {
             if(action === 'new') {
@@ -83,8 +92,12 @@ class Console extends Component {
         if (show) {
             myConsole = (
                 <div className="console footer">
-                    <div className="consoleheader" onClick={handleClick}>
-                        <span>console</span>                    
+                    <div className="consoleheader" style={{padding:'0 1rem'}}>
+                    <ButtonToolbar style={{justifyContent:'flex-end'}}>
+                    <Button className="test-speech" variant="outline-dark" style={{marginRight: '.5rem'}}>test speech</Button>
+                    <Button variant="danger" onClick={handleClick}><i className="fas fa-power-off"></i></Button>      
+                    </ButtonToolbar>
+                                      
                     </div>
                     <div className="consolebody">
                     {this.state.history.map((h,i) => (
@@ -98,13 +111,20 @@ class Console extends Component {
             )
         } else {
             myConsole = (
-                <div className="consolefooter footer" onClick={handleClick}>
-                        <span>console</span>                    
-                    </div>
+                <div className="consolefooter footer" style={{padding:'0 1rem'}}>
+                    <ButtonToolbar style={{justifyContent:'flex-end'}}>
+                        <Button variant="danger" onClick={handleClick}><i className="fas fa-power-off"></i></Button>      
+                    </ButtonToolbar>
+                </div>
             )
         }
         return(
             <div>
+                <div>
+                    <p className="phrase">Phrase...</p>
+                    <p className="result">Right or wrong?</p>
+                    <p className="output">...diagnostic messages</p>
+                </div>
                 {component}
                 {myConsole}
             </div>
