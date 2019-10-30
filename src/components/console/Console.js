@@ -161,7 +161,7 @@ class Console extends Component {
                 <div className="console footer">
                     <div className="consoleheader" style={{padding:'0 1rem'}}>
                     <ButtonToolbar style={{justifyContent:'flex-end'}}>
-                    <Button className="test-speech" variant="outline-dark" style={{marginRight: '.5rem'}}>test speech</Button>
+                    <Button className="test-speech" variant="outline-dark" style={{marginRight: '.5rem'}}><i className="fas fa-microphone"></i></Button>
                     <Button variant="danger" onClick={handleClick}><i className="fas fa-power-off"></i></Button>      
                     </ButtonToolbar>
                                       
@@ -180,7 +180,7 @@ class Console extends Component {
             myConsole = (
                 <div className="consolefooter footer" style={{padding:'0 1rem'}}>
                     <ButtonToolbar style={{justifyContent:'flex-end'}}>
-                        <Button variant="danger" onClick={handleClick}><i className="fas fa-power-off"></i></Button>      
+                        <Button variant="success" onClick={handleClick}><i className="fas fa-power-off"></i></Button>      
                     </ButtonToolbar>
                 </div>
             )

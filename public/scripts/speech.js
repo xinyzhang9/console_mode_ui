@@ -21,7 +21,7 @@ function mapPhrasesToGrammarString() {
 }
 function testSpeech() {
   testBtn.disabled = true;
-  testBtn.textContent = 'Test in progress';
+  testBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
 
   var grammar = mapPhrasesToGrammarString();
   var recognition = new SpeechRecognition();
@@ -54,12 +54,12 @@ function testSpeech() {
   recognition.onspeechend = function() {
     recognition.stop();
     testBtn.disabled = false;
-    testBtn.textContent = 'Start new test';
+    testBtn.innerHTML = '<i class="fas fa-microphone"></i>';
   }
 
   recognition.onerror = function(event) {
     testBtn.disabled = false;
-    testBtn.textContent = 'Start new test';
+    testBtn.innerHTML = '<i class="fas fa-microphone"></i>';
   }
   
   recognition.onaudiostart = function(event) {
