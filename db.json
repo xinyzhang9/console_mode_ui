@@ -77,6 +77,32 @@
       "date": "2019-10-30T03:17:07.717Z"
     }
   ],
+  "license": [
+    {
+      "id": "ebe1fcab-7714-4b4e-999f-e8d2cb61ae42",
+      "name": "Generic per device rule",
+      "publisher": "Generic",
+      "code": "SYS_GEN_PER_DEVICE",
+      "metric": "Per device",
+      "date": "2019-10-30T07:35:00.373Z"
+    },
+    {
+      "id": "f7aa9a04-68be-4bb7-a3f1-d8d8fc6ef972",
+      "name": "Licensing for 2012 datacenter edition and above",
+      "publisher": "Microsoft",
+      "code": "MS_SERVEROS_PROCESSOR_2012_DC",
+      "metric": "Server(OS)-Processor/CAL",
+      "date": "2019-10-30T07:36:07.422Z"
+    },
+    {
+      "id": "5639112e-34b6-433e-b13f-51c865a4b303",
+      "name": "Licensing for 2012 standard edition and above",
+      "publisher": "Microsoft",
+      "code": "MS_SERVEROS_PROCESSOR_2012_STD",
+      "metric": "Server(OS) - Processor/CAL",
+      "date": "2019-10-30T07:36:44.869Z"
+    }
+  ],
   "history": [
     {
       "cmd": "new compliance",

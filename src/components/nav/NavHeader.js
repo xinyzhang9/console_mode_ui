@@ -13,7 +13,7 @@ function NavHeader() {
                 <Nav className="mr-auto">
                 <Nav.Link as={Link} to="/" >Home</Nav.Link>
                 <Nav.Link as={Link} to="/compliance" >Compliance</Nav.Link>
-                <Nav.Link as={Link} to="/dashboard" >dashboard</Nav.Link>
+                <Nav.Link as={Link} to="/license" >License</Nav.Link>
                 </Nav>
                 <Form inline>
                 <FormControl type="text" placeholder="Search" className="mr-sm-2" />

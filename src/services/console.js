@@ -16,7 +16,7 @@ export const process = (cmd) => {
             });
         case 'ls':
             return Promise.resolve({
-                history: ['home', 'compliance', 'dashboard']
+                history: ['home', 'compliance', 'license']
             });
         case 'new':
             let component = cmd.substring(first.length+1).toLowerCase().trim();
@@ -32,7 +32,7 @@ export const process = (cmd) => {
     }
 }
 
-const pageList = ['home', 'compliance', 'dashboard'];
+const pageList = ['home', 'compliance', 'license'];
 const redirectList = ['go', 'cd'];
 const showList = ['show', 'list', 'ls'];
 const newList = ['new', 'add'];

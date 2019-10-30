@@ -6,7 +6,7 @@ import {
 import { createBrowserHistory } from "history";
 import Home from '../Home';
 import Compliance from '../Compliance';
-import Dashboard from '../Dashboard';
+import License from '../License';
 import Console from '../console/Console';
 
 const history = createBrowserHistory();
@@ -39,8 +39,8 @@ class Content extends Component {
                     <Route path="/Compliance">
                     <Compliance />
                     </Route>
-                    <Route path="/dashboard">
-                    <Dashboard />
+                    <Route path="/license">
+                    <License />
                     </Route>
                 </Switch>
                 <Console 

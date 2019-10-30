@@ -1,27 +1,17 @@
 import React, { Component } from 'react';
-import { loadTodos } from '../services'
+import {Jumbotron, Button} from 'react-bootstrap'
 class Home extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            todos:[]
-        }
-    } 
-    componentDidMount() {
-        loadTodos().then(data => {
-            this.setState({todos : data})
-        });
-    }
-
     render() {
         return (
-            <div>
-                {this.state.todos.map(todo => (
-                    <div>{todo.name}</div>
-                ))}
-                {/* <img alt="" src="images/linux-icon.png" /> */}
-            </div>
+            <Jumbotron>
+            <h1>Hello!</h1>
+            <p>
+              This is an experimental UI with embedded console control. You can have an experience with how powerful this console can be!
+            </p>
+            <p>
+              <Button variant="primary">Learn more</Button>
+            </p>
+          </Jumbotron>
         )
     }
 }
