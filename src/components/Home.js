@@ -9,7 +9,7 @@ class Home extends Component {
               This is an experimental UI with embedded console control. You can have an experience with how powerful this console can be!
             </p>
             <p>
-              <Button variant="primary">Learn more</Button>
+              <Button variant="outline-primary">Learn more</Button>
             </p>
           </Jumbotron>
         )

@@ -66,7 +66,7 @@ class Console extends Component {
                         history: updated,
                         currentValue: ''
                     });
-                    if(res.page) {
+                    if(res.page !== undefined) {
                         this.props.handleRedirect(res.page);
                     }
                     if(res.component) {
