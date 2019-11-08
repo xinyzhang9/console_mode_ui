@@ -83,9 +83,74 @@
   ],
   "history": [
     {
-      "cmd": "new compliance",
+      "cmd": "go home",
       "system": false,
-      "id": "fbb3ef92-b641-4fad-8426-474616906ec3"
+      "id": "6bf1e458-c7b1-4e2f-b5fb-554f9554457e"
+    },
+    {
+      "cmd": "new license",
+      "system": false,
+      "id": "a6f89f9f-e6ee-466e-983e-d7529dc9230e"
+    },
+    {
+      "cmd": "get license",
+      "system": false,
+      "id": "152b7b32-661d-4300-9a65-801bb3279540"
+    },
+    {
+      "cmd": "new license",
+      "system": false,
+      "id": "e2af3c7f-2e30-4af7-a6fe-c2806602985d"
+    },
+    {
+      "cmd": "get compliance",
+      "system": false,
+      "id": "796cec24-f22a-496b-a250-e0cf018704f5"
+    },
+    {
+      "cmd": "cd license",
+      "system": false,
+      "id": "539cee02-9542-4e51-aaf4-24aa495e83a3"
+    },
+    {
+      "cmd": "go home",
+      "system": false,
+      "id": "b78994f9-754b-4e76-b3e9-67f97dd282e7"
+    },
+    {
+      "cmd": "go compliance",
+      "system": false,
+      "id": "fd3931ed-2a6d-4ed0-a506-2faaa039dc9b"
+    },
+    {
+      "cmd": "show me the pages",
+      "system": false,
+      "id": "cd7645e2-3f79-40a4-bb82-2c3ea7d39173"
+    },
+    {
+      "cmd": "go home",
+      "system": false,
+      "id": "b236aa6c-71fa-4aa4-a53a-84232edcaf9f"
+    },
+    {
+      "cmd": "new license",
+      "system": false,
+      "id": "715ee351-7021-4488-bedf-dc012208a5e7"
+    },
+    {
+      "cmd": "get license",
+      "system": false,
+      "id": "016c7a97-22e0-4340-afb7-655a7bc3a05a"
+    },
+    {
+      "cmd": "hey siri",
+      "system": false,
+      "id": "d7374384-66ce-43f8-bfda-2bd3558a31a4"
+    },
+    {
+      "cmd": "go license",
+      "system": false,
+      "id": "ee18f132-365c-4a66-8195-264ba48e2de1"
     }
   ]
 }

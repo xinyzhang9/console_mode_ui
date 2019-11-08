@@ -41,7 +41,6 @@ class Content extends Component {
         })
     }
     render() {
-        console.log(this.state.redirect)
         let body;
         if(this.state.redirect) {
             body = this.renderPage(this.state.page)

@@ -14,7 +14,7 @@ export const process = (cmd) => {
             }
             return Promise.resolve({
                 page: page,
-                history:['operation succeed']
+                history:['operation succeeded']
             });
         case 'ls':
             return Promise.resolve({
@@ -23,7 +23,7 @@ export const process = (cmd) => {
         case 'new':
             let component = cmd.substring(first.length+1).toLowerCase().trim();
             return Promise.resolve({
-                history: ['operation succeed'],
+                history: ['operation succeeded'],
                 component: component,
                 action: 'new'
             });
@@ -33,7 +33,7 @@ export const process = (cmd) => {
             return resourceFn().then(data => {
                 if(data && data.length) {
                     return Promise.resolve({
-                        history: ['operation succeed'],
+                        history: ['operation succeeded'],
                         resource: resource,
                         data: data,
                         action: 'get'
@@ -56,7 +56,7 @@ const pageList = ['home', 'compliance', 'license'];
 const redirectList = ['go', 'cd'];
 const showList = ['show', 'list', 'ls'];
 const newList = ['new', 'add', 'create'];
-const getList = ['get', 'getall', 'retrieve', 'findall'];
+const getList = ['get', 'got', 'getall', 'retrieve', 'findall'];
 
 const keywordsMapping = (word) => {
     let w = word.toLowerCase().trim();

@@ -15,7 +15,11 @@ var phrases = [
 var resultPara = document.querySelector('.console-result');
 var testBtn = document.querySelector('.test-speech');
 
-var license_blacklist = ['unitus', 'new lighters', 'ulizes'];
+var new_license_blacklist = ['unitus', 'new lighters', 'ulizes', 'deal with lighters', 'you lighters', 'neurosis','ulysses'];
+var go_license_blacklist = ['gold glasses', 'gold license', 'cool lighters', 'colitis', 'gold prices'];
+var new_compliance_blacklist = ['newcomb plants', 'new cop cars', 'you compliance', 'new compras', 'new kompas', 'new composites'];
+var go_compliance_blacklist = ['go compras', 'gold compounds', 'gold compliance', 'gold companies', 'gold cup size', 'go comprised', 'go cameras'];
+var get_license_blacklist = ['got license', 'got lattice', 'get glasses'];
 function mapPhrasesToGrammarString() {
     return '#JSGF V1.0; grammar phrase; public <phrase> = ' + phrases.join(' | ') +';'
 }
@@ -44,7 +48,12 @@ function testSpeech() {
     // The second [0] returns the SpeechRecognitionAlternative at position 0.
     // We then return the transcript property of the SpeechRecognitionAlternative object 
     var speechResult = event.results[0][0].transcript.toLowerCase();
-    if (license_blacklist.includes(speechResult)) speechResult = "new license";
+    console.log('res 0: ', speechResult);
+    if (new_license_blacklist.includes(speechResult)) speechResult = "new license";
+    if (new_compliance_blacklist.includes(speechResult)) speechResult = "new compliance";
+    if (go_license_blacklist.includes(speechResult)) speechResult = "go license";
+    if (go_compliance_blacklist.includes(speechResult)) speechResult = "go compliance";
+    if (get_license_blacklist.includes(speechResult)) speechResult = "get license";
     resultPara.focus();
     resultPara.value = speechResult;
 
